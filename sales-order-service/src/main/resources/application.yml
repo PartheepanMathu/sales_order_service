@@ -1,0 +1,17 @@
+eureka:
+  client:
+    enabled: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:9094/eureka
+  instance:
+    hostname: localhost
+    
+item-service:
+  ribbon:
+    listOfServer : http://localhost:9092,https://localhost:9095
+    
+feign:
+  hystrix:
+    enabled: true
